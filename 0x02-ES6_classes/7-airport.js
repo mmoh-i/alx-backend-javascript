@@ -1,7 +1,7 @@
 export default class Airport {
   constructor(name, code) {
-    this._name = name;
-    this._code = code;
+    this.name = name;
+    this.code = code;
   }
 
   get name() {
@@ -20,7 +20,7 @@ export default class Airport {
     this._code = value;
   }
 
-  get [Sympbol.toStringe]() {
+  get [Symbol.toStringTag]() {
     return this._code;
   }
 }
