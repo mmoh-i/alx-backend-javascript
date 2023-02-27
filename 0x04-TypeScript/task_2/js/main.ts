@@ -46,3 +46,36 @@ function createEmployee(salary: number | string): number | string {
     
   }
 }
+
+interface Employee {
+  name: string;
+  role: string;
+}
+
+interface Director extends Employee {
+  department: string;
+}
+
+interface Teacher extends Employee {
+  subject: string;
+}
+
+function isDirector(employee: Employee): employee is Director {
+  return (employee as Director).department !== undefined;
+}
+
+function executeWork(employee: Employee) {
+  if (isDirector(employee)) {
+    workDirectorTasks(employee as Director);
+  } else {
+    workTeacherTasks(employee as Teacher);
+  }
+}
+
+function workDirectorTasks(director: Director) {
+  console.log(`${director.name} is working on director tasks for the ${director.department} department.`);
+}
+
+function workTeacherTasks(teacher: Teacher) {
+  console.log(`${teacher.name} is teaching ${teacher.subject}.`);
+}
