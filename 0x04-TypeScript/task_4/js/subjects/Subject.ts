@@ -1,7 +1,9 @@
-import {} from './'
-
 namespace Subjects {
-  class Subject {
-    teacher: Teacher =
+  export class Subject {
+    teacher: Subjects.Teacher;
+
+    setTeacher(teacher) {
+      this.teacher = teacher;
+    }
   }
 }
