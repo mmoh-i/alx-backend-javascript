@@ -79,3 +79,13 @@ function workDirectorTasks(director: Director) {
 function workTeacherTasks(teacher: Teacher) {
   console.log(`${teacher.name} is teaching ${teacher.subject}.`);
 }
+type subject = "Math" | "History";
+
+function teachClass(todayClass: Subjects) {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+    }else if (todayClass === "History") {
+      return "Teaching History";
+    }
+}
+
