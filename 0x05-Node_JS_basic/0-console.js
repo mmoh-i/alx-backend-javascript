@@ -1,6 +1,5 @@
-function displayMessage(message){
-	//outputs the argument as STDOUT
-	console.log(message);
+function displayMessage(message) {
+  console.log(message);
 }
 
 module.exports = displayMessage;
