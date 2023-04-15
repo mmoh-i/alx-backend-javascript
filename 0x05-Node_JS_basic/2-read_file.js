@@ -1,3 +1,4 @@
+/* eslint-disable guard-for-in */
 const fs = require('fs');
 
 function countStudents(path) {
