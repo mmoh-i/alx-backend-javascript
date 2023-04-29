@@ -1,10 +1,6 @@
-
 import ClassRoom from './0-classroom';
-
-/**
- * Creates an array of with a specific size.
- * @returns An array of ClassRooms.
- */
 export default function initializeRooms() {
-  return [19, 20, 34].map((size) => new ClassRoom(size));
+  return (
+    [new ClassRoom(19), new ClassRoom(20), new ClassRoom(34)]
+  );
 }
